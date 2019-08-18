@@ -17,12 +17,5 @@ struct Photo: Codable {
     var color: String?
     var description: String?
     var alt_description: String?
-    var urls: [String: String]?
-}
-
-struct ImageURLs: Codable {
-    var raw: String
-    var full: String
-    var small: String
-    var thumb: String
+    var urls: [String:String]?
 }

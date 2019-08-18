@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PAn-Jc-buA">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PAn-Jc-buA">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
@@ -27,8 +27,8 @@
                         <constraints>
                             <constraint firstItem="PAn-Jc-buA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="25g-eI-pqK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PAn-Jc-buA" secondAttribute="trailing" id="55l-oa-AiL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PAn-Jc-buA" secondAttribute="bottom" id="fDC-kB-aF7"/>
-                            <constraint firstItem="PAn-Jc-buA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="inB-5V-vT5"/>
+                            <constraint firstAttribute="bottom" secondItem="PAn-Jc-buA" secondAttribute="bottom" id="fDC-kB-aF7"/>
+                            <constraint firstItem="PAn-Jc-buA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="inB-5V-vT5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

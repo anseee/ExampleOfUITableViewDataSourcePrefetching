@@ -7,20 +7,31 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var photos = [Photo]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         
-//        self.tableView.delegate = self
-//        self.tableView.dataSource = self
+        self.tableView.register(UINib.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
         let apiManager = ApiManager()
         apiManager.loadData { photos in
-            print(photos!)
+            if let photos = photos {
+                self.photos = photos
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         }
 
     }
@@ -37,18 +48,27 @@ class ViewController: UIViewController {
 //    }
 //}
 //
-//extension ViewController: UITableViewDelegate {
-//
-//}
-//
-//extension ViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 10
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//
-//    }
-//}
+
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+}
+
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return photos.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+        
+        let photo: Photo = self.photos[indexPath.row];
+        cell.photoImageView.sd_setImage(with: URL(string: photo.urls!["regular"]!), completed: nil)
+        cell.descLabel.text = photo.description
+        
+        return cell
+    }
+}
 
 

@@ -14,9 +14,14 @@
 		992F7D052305162A005B8663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992F7D032305162A005B8663 /* LaunchScreen.storyboard */; };
 		992F7D0D230518DC005B8663 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F7D0C230518DC005B8663 /* ApiManager.swift */; };
 		992F7D1223052349005B8663 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F7D1123052349005B8663 /* Photo.swift */; };
+		992F7D162305697D005B8663 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992F7D142305697D005B8663 /* TableViewCell.swift */; };
+		992F7D172305697D005B8663 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 992F7D152305697D005B8663 /* TableViewCell.xib */; };
+		FA31D5B54702D8E101506481 /* Pods_ExampleOfUITableViewDataSourcePrefetching.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FA52BC1D0EFBD5075F4ACCF /* Pods_ExampleOfUITableViewDataSourcePrefetching.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6D83B1AD467CC11D8A6517A2 /* Pods-ExampleOfUITableViewDataSourcePrefetching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleOfUITableViewDataSourcePrefetching.debug.xcconfig"; path = "Target Support Files/Pods-ExampleOfUITableViewDataSourcePrefetching/Pods-ExampleOfUITableViewDataSourcePrefetching.debug.xcconfig"; sourceTree = "<group>"; };
+		6FA52BC1D0EFBD5075F4ACCF /* Pods_ExampleOfUITableViewDataSourcePrefetching.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleOfUITableViewDataSourcePrefetching.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F7CF723051624005B8663 /* ExampleOfUITableViewDataSourcePrefetching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleOfUITableViewDataSourcePrefetching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		992F7CFA23051624005B8663 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		992F7CFC23051624005B8663 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +31,9 @@
 		992F7D062305162A005B8663 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992F7D0C230518DC005B8663 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = ../ApiManager.swift; sourceTree = "<group>"; };
 		992F7D1123052349005B8663 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		992F7D142305697D005B8663 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		992F7D152305697D005B8663 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		A066657EAE50EBC53E17476A /* Pods-ExampleOfUITableViewDataSourcePrefetching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleOfUITableViewDataSourcePrefetching.release.xcconfig"; path = "Target Support Files/Pods-ExampleOfUITableViewDataSourcePrefetching/Pods-ExampleOfUITableViewDataSourcePrefetching.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +41,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA31D5B54702D8E101506481 /* Pods_ExampleOfUITableViewDataSourcePrefetching.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E78FDFF8262DE849F7EB9E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FA52BC1D0EFBD5075F4ACCF /* Pods_ExampleOfUITableViewDataSourcePrefetching.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		992F7CEE23051624005B8663 = {
 			isa = PBXGroup;
 			children = (
 				992F7CF923051624005B8663 /* ExampleOfUITableViewDataSourcePrefetching */,
 				992F7CF823051624005B8663 /* Products */,
+				D2BC5D63EC522513E3BFB569 /* Pods */,
+				4E78FDFF8262DE849F7EB9E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,24 +77,35 @@
 		992F7CF923051624005B8663 /* ExampleOfUITableViewDataSourcePrefetching */ = {
 			isa = PBXGroup;
 			children = (
-				992F7D0E23051EA0005B8663 /* New Group */,
+				992F7D0E23051EA0005B8663 /* Helpers */,
 				992F7CFA23051624005B8663 /* AppDelegate.swift */,
 				992F7CFC23051624005B8663 /* ViewController.swift */,
 				992F7CFE23051624005B8663 /* Main.storyboard */,
 				992F7D012305162A005B8663 /* Assets.xcassets */,
 				992F7D032305162A005B8663 /* LaunchScreen.storyboard */,
 				992F7D062305162A005B8663 /* Info.plist */,
+				992F7D142305697D005B8663 /* TableViewCell.swift */,
+				992F7D152305697D005B8663 /* TableViewCell.xib */,
 			);
 			path = ExampleOfUITableViewDataSourcePrefetching;
 			sourceTree = "<group>";
 		};
-		992F7D0E23051EA0005B8663 /* New Group */ = {
+		992F7D0E23051EA0005B8663 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				992F7D0C230518DC005B8663 /* ApiManager.swift */,
 				992F7D1123052349005B8663 /* Photo.swift */,
 			);
-			path = "New Group";
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D2BC5D63EC522513E3BFB569 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6D83B1AD467CC11D8A6517A2 /* Pods-ExampleOfUITableViewDataSourcePrefetching.debug.xcconfig */,
+				A066657EAE50EBC53E17476A /* Pods-ExampleOfUITableViewDataSourcePrefetching.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 992F7D092305162A005B8663 /* Build configuration list for PBXNativeTarget "ExampleOfUITableViewDataSourcePrefetching" */;
 			buildPhases = (
+				9F3589AA4D957E084BDC8759 /* [CP] Check Pods Manifest.lock */,
 				992F7CF323051624005B8663 /* Sources */,
 				992F7CF423051624005B8663 /* Frameworks */,
 				992F7CF523051624005B8663 /* Resources */,
+				D5AE966B0E2F28A6A57147B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				992F7D052305162A005B8663 /* LaunchScreen.storyboard in Resources */,
+				992F7D172305697D005B8663 /* TableViewCell.xib in Resources */,
 				992F7D022305162A005B8663 /* Assets.xcassets in Resources */,
 				992F7D0023051624005B8663 /* Main.storyboard in Resources */,
 			);
@@ -144,11 +177,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F3589AA4D957E084BDC8759 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExampleOfUITableViewDataSourcePrefetching-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5AE966B0E2F28A6A57147B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleOfUITableViewDataSourcePrefetching/Pods-ExampleOfUITableViewDataSourcePrefetching-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleOfUITableViewDataSourcePrefetching/Pods-ExampleOfUITableViewDataSourcePrefetching-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		992F7CF323051624005B8663 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				992F7D162305697D005B8663 /* TableViewCell.swift in Sources */,
 				992F7D1223052349005B8663 /* Photo.swift in Sources */,
 				992F7CFD23051624005B8663 /* ViewController.swift in Sources */,
 				992F7D0D230518DC005B8663 /* ApiManager.swift in Sources */,
@@ -296,6 +377,7 @@
 		};
 		992F7D0A2305162A005B8663 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D83B1AD467CC11D8A6517A2 /* Pods-ExampleOfUITableViewDataSourcePrefetching.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -315,6 +397,7 @@
 		};
 		992F7D0B2305162A005B8663 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A066657EAE50EBC53E17476A /* Pods-ExampleOfUITableViewDataSourcePrefetching.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
